@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpForce;
     [SerializeField] private float gravityModifier;
     [SerializeField] private bool isOnGround = true;
-    [SerializeField] private bool gameOver;
+    [SerializeField] public bool gameOver {get; set;}
 
     // Start is called before the first frame update
     void Start()
