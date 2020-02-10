@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool isOnGround = true;
     [SerializeField] public bool gameOver {get; set;}
     private Animator playerAnim;
+    [SerializeField] private ParticleSystem explosionParticle;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +43,7 @@ public class PlayerController : MonoBehaviour
             gameOver = true;
             playerAnim.SetBool("Death_b", true);
             playerAnim.SetInteger("DeathType_int", 1);
+            explosionParticle.Play();
         }
     }
 }
